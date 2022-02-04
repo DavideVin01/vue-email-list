@@ -9,10 +9,6 @@ body{
     animation: bouncing 1s linear 0s 1 normal forwards;
 }
 
-/* ul{
-    animation: bouncing 1s linear 0s 1 normal forwards;
-} */
-
 @keyframes bouncing {
     0% {
       animation-timing-function: ease-in;

@@ -17,6 +17,7 @@ const root = new Vue({
             for (let i = 0; i < totalMails; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
                     this.mails.push(res.data.response);
+                    console.log(res.data.response);
                 });
             };
         },

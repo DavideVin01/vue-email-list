@@ -23,8 +23,11 @@ const root = new Vue({
                 });
             };
         },
+        play() {
+            this.getRandomMails(this.totalMails);
+        },
     },
     mounted() {
-        this.getRandomMails(this.totalMails);
+        this.play();
     }
 });

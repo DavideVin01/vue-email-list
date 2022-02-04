@@ -10,14 +10,18 @@ const root = new Vue({
     el: '#root',
     data: {
         mails: [],
+        totalMails: 10,
     },
     methods: {
-        getRandomMails() {
-            for (let i = 0; i < 1; i++) {
+        getRandomMails(totalMails) {
+            for (let i = 0; i < totalMails; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
-                    console.log(res.data);
-                })
-            }
-        }
+                    this.mails.push(res.data.response);
+                });
+            };
+        },
     },
+    mounted() {
+        this.getRandomMails(this.totalMails);
+    }
 });

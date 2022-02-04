@@ -13,7 +13,7 @@
 <body>
     <div id="root">
         <div>
-            <ul>
+            <ul v-show="mails.length === totalMails">
                 <li v-for="mail in mails">{{mail}}</li>
             </ul>
         </div>

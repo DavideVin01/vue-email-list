@@ -9,9 +9,9 @@ Vue.config.devtools = true;
 const root = new Vue({
     el: '#root',
     data: {
-
+        mails: ['1', '2', '3'],
     },
     methods: {
 
-    }
+    },
 });

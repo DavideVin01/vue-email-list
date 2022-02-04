@@ -9,9 +9,15 @@ Vue.config.devtools = true;
 const root = new Vue({
     el: '#root',
     data: {
-        mails: ['1', '2', '3'],
+        mails: [],
     },
     methods: {
-
+        getRandomMails() {
+            for (let i = 0; i < 1; i++) {
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then(res => {
+                    console.log(res.data);
+                })
+            }
+        }
     },
 });
